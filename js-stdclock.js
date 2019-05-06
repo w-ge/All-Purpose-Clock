@@ -27,7 +27,7 @@
 $(document).ready(() => {
     getTime();
     let repeat = setInterval(getTime, 1000);
-   /* $(".arrow").on("click", () => {
+    $(".arrow").on("click", () => {
         $(".menu").slideToggle(400, "linear");
-    })*/
+    })
 });
