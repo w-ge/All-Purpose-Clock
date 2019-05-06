@@ -1,0 +1,32 @@
+﻿
+body {
+    background-color: darkred;
+}
+
+.main {
+    text-align: center;
+    /*margin-top: 200px;*/
+}
+
+.slider {
+    display: grid;
+    font-family: "Lobster", "Times New Roman";
+
+}
+
+.main h1 {
+    font-family: "Lobster", "Times New Roman";
+}
+
+.clockface {
+    font-family: "Bungee Inline", "Times New Roman";
+}
+
+.menu {
+    /*display: none;*/
+    overflow: hidden;
+}
+
+.arrow {
+    cursor: pointer;
+}
