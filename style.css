@@ -5,7 +5,7 @@ body {
 
 .main {
     text-align: center;
-    /*margin-top: 200px;*/
+    margin-top: 200px;
 }
 
 .slider {
@@ -21,9 +21,19 @@ body {
     font-family: "Bungee Inline", "Times New Roman";
 }
 
+.datedisplay {
+    font-family: "Bungee Inline", "Times New Roman";
+}
+
 .menu {
     display: none;
     overflow: hidden;
+    position: absolute;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
 }
 
 .arrow {
