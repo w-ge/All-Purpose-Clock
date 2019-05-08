@@ -1,3 +1,4 @@
+// Finds and displays the current time
 function getTime() {
     let today = new Date();
     let date = "";
@@ -8,8 +9,14 @@ function getTime() {
 }
 
 $(document).ready(() => {
+
+    // Get Initial Date
     getTime();
+
+    // Update Date
     let repeat = setInterval(getTime, 1000);
+
+    // Toggle Menu
     $(".arrow").on("click", () => {
         $(".menu").slideToggle(500);
     })

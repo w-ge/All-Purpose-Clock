@@ -1,4 +1,5 @@
-﻿function getTime() {
+﻿// Finds and displays the current time
+function getTime() {
     let today = new Date();
     let time = "";
     if ($(document).find("title").text() === "Standard Clock") {
@@ -36,8 +37,14 @@
 }
 
 $(document).ready(() => {
+
+    // Get Initial Date
     getTime();
+
+    // Update Clock
     let repeat = setInterval(getTime, 1000);
+
+    // Toggle Menu
     $(".arrow").on("click", () => {
         $(".menu").slideToggle(500);
     })

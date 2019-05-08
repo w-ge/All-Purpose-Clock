@@ -21,6 +21,10 @@ body {
     font-family: "Bungee Inline", "Times New Roman";
 }
 
+.timerface {
+    font-family: "Bungee Inline", "Times New Roman";
+}
+
 .datedisplay {
     font-family: "Bungee Inline", "Times New Roman";
 }
@@ -39,4 +43,29 @@ body {
 .arrow {
     cursor: pointer;
     margin-bottom: 0px;
+}
+
+.button {
+    cursor: pointer;
+    display: inline;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.buttonOver {
+    background-color: grey;
+}
+
+.stopwatch-ctrl {
+    display: grid;
+    grid-template-columns: 10% 10%;
+    grid-gap: 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }
