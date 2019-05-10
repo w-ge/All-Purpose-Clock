@@ -5,23 +5,27 @@ let time = "";
 let run = "";
 function timerCount() {
     time = "";
-    time += min + ":";
-    if (sec <= 9) {
-        time += "0";
-    }
-    time += sec + ":";
-
     if (milli >= 1000) {
         sec++;
         milli = 0;
     }
-    if (milli <= 9) {
-        time += "00";
+    if (sec >= 60) {
+        min++;
+        sec = 0;
     }
-    else if (milli <= 99) {
+
+    if (min <= 9) {
         time += "0";
     }
-    time += milli;
+    time += min + ":";
+
+    if (sec <= 9) {
+        time += "0";
+    }
+    
+    time += sec + ":";
+   
+    time += milli / 100;
     $(".timerface").text(time);
 }
 function runTimer() {
@@ -49,6 +53,7 @@ $(document).ready(() => {
     $("#start").on("click", () => {
         $("#start").hide();
         $(".hidden").show();
+        $("#start-title").hide();
         runTimer();
         run = setInterval(runTimer, 100);
     });
@@ -75,6 +80,8 @@ $(document).ready(() => {
 
     // Lap or Reset the Stopwatch
     $("#lap").on("click", () => {
+
+        // Resets Stopwatch
         if ($("#lap").text() === "Reset") {
             $("#stop").text("Stop");
             $("#lap").text("Lap");
@@ -83,7 +90,17 @@ $(document).ready(() => {
             sec = 0;
             min = 0;
             runTimer();
+            $(".laps").empty();
             $("#start").show();
+            $("#start-title").show();
+        }
+        
+        // Add a Lap
+        else {
+            $(".laps").append("<h2>" + time + "</h2>");
+            milli = 0;
+            sec = 0;
+            min = 0;
         }
     });
 });

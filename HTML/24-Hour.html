@@ -5,34 +5,26 @@
     <meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Monoton|Orbitron|Press+Start+2P|VT323" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Stopwatch</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+    <title>24-Hour Clock</title>
 </head>
 <body>
-
     <div class="slider">
-        <h1 class="arrow">> Stopwatch</h1>
+        <h1 class="arrow">> 24-Hour Time</h1>
         <div class="menu">
-            <h1><a href="Standard-clock.html">Time</a></h1>
-            <h1><a href="24-Hour.html">24-Hour Time</a></h1>
             <h1><a href="Date.html">Date</a></h1>
             <h1><a>Timer</a></h1>
+            <h1><a href="Stopwatch.html">Stopwatch</a></h1>
+            <h1><a href="Standard-clock.html">Time</a></h1>
         </div>
     </div>
 
     <div class="main">
-        <h1>Click on Start to Begin</h1>
-        <h2 class="timerface"></h2>
-        <h2 class="button" id="start">Start</h2>
+        <h1>The Current Time Is </h1>
+        <h2 class="clockface"></h2>
     </div>
 
-    <div class="hidden">
-        <div class="stopwatch-ctrl">
-            <h2 class="button" id="stop">Stop</h2>
-            <h2 class="button" id="lap">Lap</h2>
-        </div>
-    </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js-stopwatch.js"></script>
+    <script src="../Javascript/js-stdclock.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@ function getTime() {
     let date = "";
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    date += "" + days[today.getDay()] + ", " + months[today.getMonth()] + today.getDate() + ", " + today.getFullYear();
+    date += "" + days[today.getDay()] + ", " + months[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear();
     $(".datedisplay").text(date);
 }
 
