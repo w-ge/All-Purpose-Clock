@@ -59,6 +59,18 @@ body {
     background-color: grey;
 }
 
+.buttonArrowT {
+    padding-top: 20px;
+}
+
+.buttonArrowB {
+    padding-bottom: 40px;
+}
+
+.buttonArrow h2{
+    margin: 5px;
+}
+
 .stopwatch-ctrl {
     display: grid;
     grid-template-columns: 10% 10%;
