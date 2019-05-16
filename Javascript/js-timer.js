@@ -1,7 +1,8 @@
 let sec = 0;
 let min = 0;
 let time = "";
-
+let decTime = 0;
+let audio = $("#myAudio")[0];
 function updateDisplay() {
     time = "";
     if (min <= 9) {
@@ -15,6 +16,26 @@ function updateDisplay() {
 
     time += sec;
     $(".timerface").text(time);
+}
+
+function decreaseTime() {
+    // Stop Timer if 00:00 is Reached
+    if (sec === 0 && min === 0) {
+        clearInterval(decTime);
+        audio.play();
+    }
+    else {
+        sec--;
+    }
+    
+   
+    // Decrement Time
+    if (sec < 0) {
+        min--;
+        sec = 59;
+    }
+    updateDisplay();
+   
 }
 $("document").ready(() => {
 
@@ -52,7 +73,33 @@ $("document").ready(() => {
         if (sec < 0) {
             sec = 59;
         }
+      
         updateDisplay();
+    });
+
+    // Start Timer
+    $("#start").on("click", () => {
+        $("#start-title").hide();
+        $("#start").hide();
+        $(".buttonArrowT").hide();
+        $(".buttonArrowB").hide();
+        $("#reset").show();
+        decTime = setInterval(decreaseTime, 1000);
+    });
+
+    // Stop Timer
+    $("#reset").on("click", () => {
+        $("#reset").hide();
+        $("#start-title").show();
+        $("#start").show();
+        $(".buttonArrowT").show();
+        $(".buttonArrowB").show();
+        clearInterval(decTime);
+        sec = 0;
+        min = 0;
+        updateDisplay();
+        audio.pause();
+        sound.currentTime = 0;
     });
 
 

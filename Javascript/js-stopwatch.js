@@ -26,7 +26,7 @@ function timerCount() {
     time += sec + ":";
    
     time += milli / 100;
-    $(".timerface").text(time);
+    $(".clockface").text(time);
 }
 function runTimer() {
     timerCount();
